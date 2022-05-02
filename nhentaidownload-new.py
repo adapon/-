@@ -15,7 +15,6 @@ for i in range(1,int(a)+2):
     soup=BeautifulSoup(respond.text,"html.parser")
     soup=soup.find_all("img")
     soup=soup[1].get("src")
-    print(soup)
     r=requests.get(soup)
     print(i)
     with open(f"./{b}/{i}.png","wb") as f:
